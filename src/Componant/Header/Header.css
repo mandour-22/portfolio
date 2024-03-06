@@ -1,0 +1,123 @@
+header.flex {
+  justify-content: space-between;
+  padding: 0 2.4rem;
+  margin-top: 1.5rem;
+}
+header ul.flex {
+  gap: 17px;
+}
+header nav {
+  background-color: var(--bgHeader);
+  padding: 1rem 1.7rem;
+  border-radius: 55px;
+  transition: 0.2s;
+  box-shadow: 0px 0px 7px -3px var(--title);
+}
+header ul li {
+  color: var(--title);
+}
+header ul li a {
+  color: var(--title);
+  opacity: 0.8;
+  font-size: 0.88rem;
+  font-weight: 500;
+  &:hover {
+    opacity: 0.8;
+    color: var(--blue);
+  }
+}
+button.Menu {
+  display: none;
+}
+button.icon-moon-o,
+button.Menu {
+  height: 2.5rem;
+  width: 2.5rem;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 20px;
+  user-select: none;
+  border: 1px solid rgba(255, 140, 0, 0.2);
+  transition: 0.2s;
+  &:hover {
+    border-color: rgb(255, 140, 0);
+    /* background-color: var(--title); */
+  }
+}
+.light button.icon-moon-o,
+.light button.Menu {
+  color: #263238;
+}
+.dark button.icon-moon-o,
+.dark button.Menu {
+  color: #f6f4f4;
+}
+.overlay {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(19 19 22 / 70%);
+  z-index: 100;
+}
+/* T9qQQ!6hfcZm@Jt */
+.overlay ul.model {
+  width: 80%;
+  margin: 5rem auto;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  background-color: var(--primary);
+  box-shadow: 1px 1px 40px -3px #252525;
+  animation: showAnimation 0.5s 1;
+}
+/* Animation */
+@keyframes showAnimation {
+  0% {
+    scale: 0;
+  }
+  60% {
+    scale: 1.2;
+  }
+  100% {
+    scale: 1;
+  }
+}
+.overlay ul.model li {
+  padding: 0.88rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.overlay ul.model li:last-child {
+  border-bottom: none;
+}
+.overlay ul.model li:first-child {
+  border: none;
+  text-align: right;
+  cursor: pointer;
+  button {
+    font-size: 20px;
+    transition: 0.3s;
+    background-color: transparent;
+    border: none;
+    color: var(--title);
+    font-weight: 700;
+    padding: 0;
+    margin: 0;
+    &:hover {
+      color: rgb(248, 13, 9);
+    }
+  }
+}
+.overlay ul.model li a {
+  font-size: 16px;
+}
+@media (max-width: 840px) {
+  header.flex {
+    padding: 0 1rem;
+  }
+  button.Menu {
+    display: block;
+  }
+  header nav {
+    display: none;
+  }
+}
